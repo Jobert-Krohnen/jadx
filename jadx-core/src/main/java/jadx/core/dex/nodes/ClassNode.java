@@ -574,6 +574,11 @@ public class ClassNode extends NotificationAttrNode
 	}
 
 	@Override
+	public void rename(String newName) {
+		clsInfo.changeShortName(newName);
+	}
+
+	@Override
 	public void onParentPackageUpdate(PackageNode updatedPkg) {
 		if (isInner()) {
 			return;
@@ -735,6 +740,15 @@ public class ClassNode extends NotificationAttrNode
 		return clsInfo;
 	}
 
+	public String getName() {
+		return clsInfo.getShortName();
+	}
+
+	public String getAlias() {
+		return clsInfo.getAliasShortName();
+	}
+
+	@Deprecated
 	public String getShortName() {
 		return clsInfo.getAliasShortName();
 	}
