@@ -136,10 +136,12 @@ public class FileDialog {
 				break;
 
 			case CUSTOM_SAVE:
+				currentDir = mainWindow.getSettings().getLastSaveFilePath();
 				isOpen = false;
 				break;
 
 			case CUSTOM_OPEN:
+				currentDir = mainWindow.getSettings().getLastOpenFilePath();
 				isOpen = true;
 				break;
 		}
