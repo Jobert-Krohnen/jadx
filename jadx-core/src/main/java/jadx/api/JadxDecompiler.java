@@ -24,7 +24,6 @@ import org.jetbrains.annotations.Nullable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import jadx.api.core.nodes.IJadxDecompiler;
 import jadx.api.impl.plugins.SimplePluginContext;
 import jadx.api.metadata.ICodeAnnotation;
 import jadx.api.metadata.ICodeNodeRef;
@@ -85,7 +84,7 @@ import jadx.core.xmlgen.ResourcesSaver;
  * </code>
  * </pre>
  */
-public final class JadxDecompiler implements IJadxDecompiler, Closeable {
+public final class JadxDecompiler implements Closeable {
 	private static final Logger LOG = LoggerFactory.getLogger(JadxDecompiler.class);
 
 	private final JadxArgs args;
